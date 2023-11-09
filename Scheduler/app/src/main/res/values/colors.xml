@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#B5FF6F01</color>
+    <color name="colorPrimaryDark">#E3FF1D15</color>
+    <color name="colorAccent">#5E9E76</color>
+    <color name="mainfone">#FFFF7A</color>
+    <color name="mainfoned">#ffb41f</color>
+
+</resources>

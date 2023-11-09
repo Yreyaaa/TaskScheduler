@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "D:\\Time_manager\\Notelin-1.0\\app\\build\\intermediates\\res\\merged\\debug\\menu\\pas.xml",
+        "source": "D:\\Time_manager\\Notelin-1.0\\app\\src\\main\\res\\menu\\pas.xml"
+    },
+    {
+        "merged": "D:\\Time_manager\\Notelin-1.0\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "D:\\Time_manager\\Notelin-1.0\\app\\src\\main\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "D:\\Time_manager\\Notelin-1.0\\app\\build\\intermediates\\res\\merged\\debug\\menu\\note.xml",
+        "source": "D:\\Time_manager\\Notelin-1.0\\app\\src\\main\\res\\menu\\note.xml"
+    }
+]

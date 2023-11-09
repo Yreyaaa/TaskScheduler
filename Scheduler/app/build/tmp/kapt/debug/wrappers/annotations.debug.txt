@@ -1,0 +1,167 @@
+p diplom.time.ui.activities 0
+d 0/MainActivity
+a com.arellomobile.mvp.presenter.InjectPresenter 0
+f 0 0/MainActivity mPresenter
+a org.jetbrains.annotations.NotNull 1
+f 1 0/MainActivity mPresenter
+m 1 0/MainActivity getMPresenter
+d 0/NoteActivity
+f 0 0/NoteActivity mPresenter
+f 1 0/NoteActivity mPresenter
+m 1 0/NoteActivity getMPresenter
+d 0/PasActivity
+f 0 0/PasActivity pPresenter
+f 1 0/PasActivity pPresenter
+m 1 0/PasActivity getPPresenter
+p diplom.time.utils 1
+d 1/DateUtils
+a kotlin.jvm.JvmName 2
+c 2 1/DateUtils
+m 1 1/DateUtils formatDate
+d 1/PrefsUtils
+c 2 1/PrefsUtils
+m 1 1/PrefsUtils getNotesSortMethodName
+m 1 1/PrefsUtils getPasSortMethodName
+p diplom.time.mvp.presenters 2
+d 2/MainPresenter
+a com.arellomobile.mvp.InjectViewState 3
+c 3 2/MainPresenter
+d 2/MainPresenter$SortNotesBy
+d 2/MainPresenter$SortNotesBy$DATE
+d 2/MainPresenter$SortNotesBy$NAME
+a javax.inject.Inject 4
+f 4 2/MainPresenter mNoteDao
+f 1 2/MainPresenter mNoteDao
+m 1 2/MainPresenter getMNoteDao
+f 1 2/MainPresenter mPas
+m 1 2/MainPresenter getMPas
+f 1 2/MainPresenter mNotesList
+m 1 2/MainPresenter getMNotesList
+m 1 2/MainPresenter getCurrentSortMethod
+a org.greenrobot.eventbus.Subscribe 5
+m 5 2/MainPresenter onNoteEdit
+m 5 2/MainPresenter onNoteDelete
+d 2/NotePresenter
+c 3 2/NotePresenter
+f 4 2/NotePresenter mNoteDao
+f 1 2/NotePresenter mNoteDao
+m 1 2/NotePresenter getMNoteDao
+f 1 2/NotePresenter mNote
+m 1 2/NotePresenter getMNote
+d 2/PasPresenter
+c 3 2/PasPresenter
+d 2/PasPresenter$SortPasBy
+d 2/PasPresenter$SortPasBy$NAME
+f 4 2/PasPresenter mPasDao
+f 1 2/PasPresenter mPasDao
+m 1 2/PasPresenter getMPasDao
+f 1 2/PasPresenter mPasList
+m 1 2/PasPresenter getMPasList
+m 1 2/PasPresenter getCurrentSortMethod
+m 5 2/PasPresenter onPasEdit
+m 5 2/PasPresenter onPasDelete
+p diplom.time.di 3
+d 3/AppComponent
+a javax.inject.Singleton 6
+c 6 3/AppComponent
+a dagger.Component 7
+c 7 3/AppComponent
+d 3/AppComponent$DefaultImpls
+d 3/NoteDaoModule
+a dagger.Module 8
+c 8 3/NoteDaoModule
+a dagger.Provides 9
+m 9 3/NoteDaoModule provideNoteDao
+m 6 3/NoteDaoModule provideNoteDao
+m 1 3/NoteDaoModule provideNoteDao
+d 3/PasDaoModule
+c 8 3/PasDaoModule
+m 9 3/PasDaoModule providePasDao
+m 6 3/PasDaoModule providePasDao
+m 1 3/PasDaoModule providePasDao
+p diplom.time.mvp.common 4
+d 4/MvpAppCompatActivity
+f 1 4/MvpAppCompatActivity mvpDelegate$delegate
+m 1 4/MvpAppCompatActivity getMvpDelegate
+p diplom.time.bus 5
+d 5/NoteDeleteAction
+d 5/NoteEditAction
+d 5/PasEditAction
+p diplom.time.ui.adapters 6
+d 6/NotesAdapter
+d 6/NotesAdapter$ViewHolder
+f 1 6/NotesAdapter$ViewHolder mNoteTitle
+m 1 6/NotesAdapter$ViewHolder getMNoteTitle
+f 1 6/NotesAdapter$ViewHolder mNoteDate
+m 1 6/NotesAdapter$ViewHolder getMNoteDate
+m 1 6/NotesAdapter onCreateViewHolder
+d 6/PasAdapter
+d 6/PasAdapter$ViewHolder
+f 1 6/PasAdapter$ViewHolder mPasTitle
+m 1 6/PasAdapter$ViewHolder getMPasTitle
+m 1 6/PasAdapter onCreateViewHolder
+p diplom.time 7
+d 7/TimeApplication
+d 7/TimeApplication$Companion
+f 1 7/TimeApplication graph
+m 1 7/TimeApplication$Companion getGraph
+f 1 7/TimeApplication graph1
+m 1 7/TimeApplication$Companion getGraph1
+f 1 7/TimeApplication context
+m 1 7/TimeApplication$Companion getContext
+p diplom.time.ui.commons 8
+d 8/ItemClickSupport
+d 8/ItemClickSupport$ItemClickListener
+d 8/ItemClickSupport$ItemClickListener$DefaultImpls
+d 8/ItemClickSupport$ItemLongClickListener
+d 8/ItemClickSupport$ItemLongClickListener$DefaultImpls
+m 1 8/ItemClickSupport setOnItemClickListener
+m 1 8/ItemClickSupport setOnItemClickListener
+m 1 8/ItemClickSupport setOnItemLongClickListener
+m 1 8/ItemClickSupport setOnItemLongClickListener
+d 8/ItemClickSupport$Companion
+m 1 8/ItemClickSupport$Companion addTo
+a org.jetbrains.annotations.Nullable 10
+m 10 8/ItemClickSupport$Companion removeFrom
+p diplom.time.mvp.models 9
+d 9/Note
+a com.activeandroid.annotation.Table 11
+c 11 9/Note
+a com.activeandroid.annotation.Column 12
+f 12 9/Note pascade
+f 10 9/Note pascade
+m 10 9/Note getPascade
+f 12 9/Note title
+f 10 9/Note title
+m 10 9/Note getTitle
+f 12 9/Note text
+f 10 9/Note text
+m 10 9/Note getText
+f 12 9/Note createDate
+f 10 9/Note createDate
+m 10 9/Note getCreateDate
+f 12 9/Note changeDate
+f 10 9/Note changeDate
+m 10 9/Note getChangeDate
+f 12 9/Note event
+m 1 9/Note getInfo
+d 9/NoteDao
+m 1 9/NoteDao createNote
+d 9/Pas
+c 11 9/Pas
+f 12 9/Pas title
+f 10 9/Pas title
+m 10 9/Pas getTitle
+m 1 9/Pas getInfo
+d 9/PasDao
+m 1 9/PasDao createPas
+p diplom.time.mvp.views 10
+d 10/MainView
+a com.arellomobile.mvp.viewstate.strategy.StateStrategyType 13
+c 13 10/MainView
+d 10/MainView$DefaultImpls
+d 10/NoteView
+d 10/NoteView$DefaultImpls
+d 10/PasView
+c 13 10/PasView
+d 10/PasView$DefaultImpls
